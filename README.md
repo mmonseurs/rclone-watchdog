@@ -1,5 +1,5 @@
 # rclone-watchdog
-Filesystem syncing with smart debouncing and queuing. Watches your local directory and keeps a remote (rclone) destination in sync. NOTE: this project is in no way affiliated with rclone. This is just an independant script I wrote to sync my homelab to Google Drive as a backup, and I thought I'd share just in case.
+Directory syncing with filesystem monitoring, smart debouncing and queuing. Watches your local directory and keeps a remote (rclone) destination in sync, triggered by changes to files/directories. NOTE: this project is in no way affiliated with rclone. This is just an independent script I wrote, because I wanted a way to have rclone look for filesystem changes and automatically sync those to my cloud storage for backups. Since there's no official Google Drive sync client for Linux, this'll do for my usecase. This is strictly one-way however, so no bilateral sync sadly.
 
 ## Features
 - Robust: uses [rclone](https://rclone.org/) to sync to/from local/remote directories
