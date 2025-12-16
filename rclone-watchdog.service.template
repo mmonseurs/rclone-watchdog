@@ -1,0 +1,14 @@
+[Unit]
+Description=Automatically sync source to target
+
+[Service]
+ExecStart=$PATH_TO_rclone-watchdog.js --source=/media --target=googledrive:/media
+Restart=always
+User=$USER
+Group=$GROUP
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=$PATH_TO_WORKINGDIR
+
+[Install]
+WantedBy=multi-user.target
