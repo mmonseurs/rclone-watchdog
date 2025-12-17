@@ -53,7 +53,7 @@ function runSync() {
 		log('Already syncing, skipping...');
 		return;
 	}
-    log(`Syncing ${args.source} → ${args.target}`);
+    log(`Syncing ${args.source} → ${args.target}...`);
 	currentSync = spawn('rclone', ['sync', args.source, args.target], {
 		stdio: ['ignore', 'pipe', 'pipe']
 	});
